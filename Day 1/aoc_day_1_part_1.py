@@ -1,5 +1,5 @@
 with open("input.txt", 'r') as val:
-    isList1 = True
+    is_list1 = True
     total = 0
     entry = val.read().split()
     list1 = []
@@ -7,12 +7,12 @@ with open("input.txt", 'r') as val:
 
     # Split the input into 2 lists
     for i in entry:
-        if isList1:
+        if is_list1:
             list1.append(i)
-            isList1 = not isList1
+            is_list1 = not is_list1
         else:
             list2.append(i)
-            isList1 = not isList1
+            is_list1 = not is_list1
 
     # Sort the lists
     list1.sort()
