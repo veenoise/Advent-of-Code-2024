@@ -9,18 +9,18 @@ with open("input.txt", "r") as val:
     
     # Get the safe reports
     for i in list_level:
-        isIncrease = None
+        is_increase = None
         for j in range(len(i) - 1):
-            if isIncrease == None:
+            if is_increase == None:
                 if i[j] > i[j + 1]:
-                    isIncrease = False
+                    is_increase = False
                 else:
-                    isIncrease = True
+                    is_increase = True
             if not (abs(i[j] - i[j + 1]) >= 1 and abs(i[j] - i[j + 1]) <= 3):
                 break
-            if isIncrease and i[j] > i[j + 1]:
+            if is_increase and i[j] > i[j + 1]:
                 break
-            if not isIncrease and i[j] < i[j + 1]:
+            if not is_increase and i[j] < i[j + 1]:
                 break
             
             if j == len(i) - 2:
